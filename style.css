@@ -1,0 +1,128 @@
+body {
+     height: 100vh;
+     margin: 0px;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+}
+
+.container {
+     width: 30%;
+     background-color: #353434;
+     padding: 2px;
+     box-sizing: border-box;
+}
+
+.container div {
+     width: 100%;
+}
+
+.container .header {
+     height: 15vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0px 50px;
+     box-sizing: border-box;
+     overflow: scroll;
+}
+
+.container .header p{
+     flex: 1;
+     color: white;
+     font-size: 3.8em;
+     font-family: sans-serif;
+     font-weight: bold;
+     text-align: right;
+     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.151);
+     margin: 0px;
+}
+
+.container .body {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 3px;
+}
+
+.container .body .col{
+     background-color: #D5D4D3;
+     color: #353434;
+     font-size: 1.7em;
+     font-weight: bold;
+     text-align: center;
+     line-height: 88.313px;
+     font-family: sans-serif;
+     cursor: pointer;
+}
+
+.container .body .col:last-child{
+     grid-area: 4/3/5/5;
+}
+
+.calcRound {
+     background-color: #F6A808 !important;
+}
+
+.history {
+     width: 30%;
+     height: 50%;
+     text-align: center;
+     font-family: sans-serif;
+}
+
+.history .historyContainer {
+     width: 100%;
+     height: 80%;
+     overflow: scroll;
+}
+
+.history .historyContainer table{
+     border-collapse: collapse;
+}
+
+.history .historyContainer table th{
+     background-color: orange;
+     border: 1px solid rgb(226, 226, 226);
+     color: white;
+}
+
+.history .historyContainer table td{
+     border: 1px solid rgb(226, 226, 226);
+}
+
+@media only screen 
+     and (min-width : 200px)
+     and (max-width : 568px){
+          body {
+               flex-direction: column;
+               height: 1300px;
+          }
+
+          .container {
+               width: 80%;
+          }
+
+          .container .header {
+               padding: 0px 20px;
+               height: 150px;
+          }
+
+          .container .body {
+               grid-template-rows: repeat(4,60px);
+          }
+
+          .container .body .col{
+               line-height: 60px;
+               margin: auto;
+          }
+
+          .history {
+               width: 100%;
+               height: 30%;
+          }
+
+          .history .historyContainer table{
+               width: 90%;
+               margin: auto;
+          }
+}
